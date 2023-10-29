@@ -3,6 +3,7 @@ package com.heeratsingh.ecommerce.model;
 import java.time.LocalDate;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import lombok.Data;
 
 @Data

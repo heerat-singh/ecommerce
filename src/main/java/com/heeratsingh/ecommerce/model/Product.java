@@ -19,10 +19,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Product {
 
     @Id
@@ -77,31 +81,6 @@ public class Product {
 
     private LocalDateTime createdAt;
 
-    public Product() {
-
-    }
-
-    public Product(Long id, String title, String description, int price, int discountedPrice, int discountPersent,
-                   int quantity, String brand, String color, Set<Size> sizes, String imageUrl, List<Rating> ratings,
-                   List<Review> reviews, int numRatings, Category category, LocalDateTime createdAt) {
-        super();
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.price = price;
-        this.discountedPrice = discountedPrice;
-        this.discountPersent = discountPersent;
-        this.quantity = quantity;
-        this.brand = brand;
-        this.color = color;
-        this.sizes = sizes;
-        this.imageUrl = imageUrl;
-        this.ratings = ratings;
-        this.reviews = reviews;
-        this.numRatings = numRatings;
-        this.category = category;
-        this.createdAt = createdAt;
-    }
 
     @Override
     public int hashCode() {
