@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.heeratsingh.exception.OrderException;
-import com.heeratsingh.modal.Order;
-import com.heeratsingh.response.ApiResponse;
-import com.heeratsingh.service.OrderService;
+import com.heeratsingh.ecommerce.exception.OrderException;
+import com.heeratsingh.ecommerce.model.Order;
+import com.heeratsingh.ecommerce.response.ApiResponse;
+import com.heeratsingh.ecommerce.service.OrderService;
 
 @RestController
 @RequestMapping("/api/admin/orders")

@@ -1,4 +1,8 @@
 package com.heeratsingh.ecommerce.user.domain;
 
-public class ProductCategory {
+public enum ProductCategory {
+
+    MALE,
+    FEMALE
 }
+

@@ -1,4 +1,9 @@
 package com.heeratsingh.ecommerce.user.domain;
 
-public class PaymentStatus {
+public enum PaymentStatus {
+
+    PENDING,
+    PROCESSING,
+    COMPLETED,
+    FAILED
 }

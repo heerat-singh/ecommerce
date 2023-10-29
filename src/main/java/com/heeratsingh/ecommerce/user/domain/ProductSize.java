@@ -1,4 +1,13 @@
 package com.heeratsingh.ecommerce.user.domain;
 
-public class ProductSize {
+public enum ProductSize {
+
+    XS,
+    S,
+    M,
+    L,
+    XL,
+    XXL,
+    XXXL,
+    XXXXL
 }

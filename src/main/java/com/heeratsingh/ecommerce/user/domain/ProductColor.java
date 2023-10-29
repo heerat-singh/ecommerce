@@ -1,4 +1,17 @@
 package com.heeratsingh.ecommerce.user.domain;
+public enum ProductColor {
 
-public class ProductColor {
+    BLACK,
+    WHITE,
+    RED,
+    GREEN,
+    BLUE,
+    YELLOW,
+    PINK,
+    PURPLE,
+    ORANGE,
+    GREY,
+    BROWN,
+    GOLD,
+    SILVER
 }

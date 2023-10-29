@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.heeratsingh.exception.ProductException;
-import com.heeratsingh.exception.UserException;
-import com.heeratsingh.model.Cart;
-import com.heeratsingh.model.CartItem;
-import com.heeratsingh.model.User;
-import com.heeratsingh.request.AddItemRequest;
-import com.heeratsingh.response.ApiResponse;
-import com.heeratsingh.service.CartService;
-import com.heeratsingh.service.UserService;
+import com.heeratsingh.ecommerce.exception.ProductException;
+import com.heeratsingh.ecommerce.exception.UserException;
+import com.heeratsingh.ecommerce.model.Cart;
+import com.heeratsingh.ecommerce.model.CartItem;
+import com.heeratsingh.ecommerce.model.User;
+import com.heeratsingh.ecommerce.request.AddItemRequest;
+import com.heeratsingh.ecommerce.response.ApiResponse;
+import com.heeratsingh.ecommerce.service.CartService;
+import com.heeratsingh.ecommerce.service.UserService;
 
 @RestController
 @RequestMapping("/api/cart")

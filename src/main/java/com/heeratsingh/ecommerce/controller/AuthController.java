@@ -14,15 +14,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.heeratsingh.config.JwtTokenProvider;
-import com.heeratsingh.exception.UserException;
-import com.heeratsingh.model.Cart;
-import com.heeratsingh.model.User;
-import com.heeratsingh.repository.UserRepository;
-import com.heeratsingh.request.LoginRequest;
-import com.heeratsingh.response.AuthResponse;
-import com.heeratsingh.service.CartService;
-import com.heeratsingh.service.CustomUserDetails;
+import com.heeratsingh.ecommerce.config.JwtTokenProvider;
+import com.heeratsingh.ecommerce.exception.UserException;
+import com.heeratsingh.ecommerce.model.Cart;
+import com.heeratsingh.ecommerce.model.User;
+import com.heeratsingh.ecommerce.repository.UserRepository;
+import com.heeratsingh.ecommerce.request.LoginRequest;
+import com.heeratsingh.ecommerce.response.AuthResponse;
+import com.heeratsingh.ecommerce.service.CartService;
+import com.heeratsingh.ecommerce.service.CustomUserDetails;
 
 import jakarta.validation.Valid;
 

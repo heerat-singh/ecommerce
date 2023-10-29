@@ -1,4 +1,13 @@
 package com.heeratsingh.ecommerce.user.domain;
 
-public class ProductSubCategory {
+public enum ProductSubCategory {
+
+    SHIRT,
+    TSHIRT,
+    SHOES,
+    PAINT,
+    SAREE,
+    KURTA,
+    WATCH
+
 }

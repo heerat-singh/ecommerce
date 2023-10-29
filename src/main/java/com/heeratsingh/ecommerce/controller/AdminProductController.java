@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.heeratsingh.exception.ProductException;
-import com.heeratsingh.modal.Product;
-import com.heeratsingh.request.CreateProductRequest;
-import com.heeratsingh.response.ApiResponse;
-import com.heeratsingh.service.ProductService;
+import com.heeratsingh.ecommerce.exception.ProductException;
+import com.heeratsingh.ecommerce.model.Product;
+import com.heeratsingh.ecommerce.request.CreateProductRequest;
+import com.heeratsingh.ecommerce.response.ApiResponse;
+import com.heeratsingh.ecommerce.service.ProductService;
 
 @RestController
 @RequestMapping("/api/admin/products")

@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.heeratsingh.exception.CartItemException;
-import com.heeratsingh.exception.UserException;
-import com.heeratsingh.model.CartItem;
-import com.heeratsingh.model.User;
-import com.heeratsingh.response.ApiResponse;
-import com.heeratsingh.service.CartItemService;
-import com.heeratsingh.service.UserService;
+import com.heeratsingh.ecommerce.exception.CartItemException;
+import com.heeratsingh.ecommerce.exception.UserException;
+import com.heeratsingh.ecommerce.model.CartItem;
+import com.heeratsingh.ecommerce.model.User;
+import com.heeratsingh.ecommerce.response.ApiResponse;
+import com.heeratsingh.ecommerce.service.CartItemService;
+import com.heeratsingh.ecommerce.service.UserService;
 
 @RestController
 @RequestMapping("/api/cart_items")

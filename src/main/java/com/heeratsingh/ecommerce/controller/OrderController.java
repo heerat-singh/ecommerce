@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.heeratsingh.exception.OrderException;
-import com.heeratsingh.exception.UserException;
-import com.heeratsingh.model.Address;
-import com.heeratsingh.model.Order;
-import com.heeratsingh.model.User;
-import com.heeratsingh.service.OrderService;
-import com.heeratsingh.service.UserService;
+import com.heeratsingh.ecommerce.exception.OrderException;
+import com.heeratsingh.ecommerce.exception.UserException;
+import com.heeratsingh.ecommerce.model.Address;
+import com.heeratsingh.ecommerce.model.Order;
+import com.heeratsingh.ecommerce.model.User;
+import com.heeratsingh.ecommerce.service.OrderService;
+import com.heeratsingh.ecommerce.service.UserService;
 
 @RestController
 @RequestMapping("/api/orders")
