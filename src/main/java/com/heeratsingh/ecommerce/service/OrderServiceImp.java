@@ -7,15 +7,10 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
+import com.heeratsingh.ecommerce.model.*;
 import org.springframework.stereotype.Service;
 
 import com.heeratsingh.ecommerce.exception.OrderException;
-import com.heeratsingh.ecommerce.model.Address;
-import com.heeratsingh.ecommerce.model.Cart;
-import com.heeratsingh.ecommerce.model.CartItem;
-import com.heeratsingh.ecommerce.model.Order;
-import com.heeratsingh.ecommerce.model.OrderItem;
-import com.heeratsingh.ecommerce.model.User;
 import com.heeratsingh.ecommerce.repository.AddressRepository;
 import com.heeratsingh.ecommerce.repository.OrderItemRepository;
 import com.heeratsingh.ecommerce.repository.OrderRepository;
@@ -45,10 +40,10 @@ public class OrderServiceImp implements OrderService {
     }
 
     @Override
-    public Order createOrder(User user, Address shippAddress) {
+    public Order createOrder(User user, Address shipAddress) {
 
-        shippAddress.setUser(user);
-        Address address= addressRepository.save(shippAddress);
+        shipAddress.setUser(user);
+        Address address= addressRepository.save(shipAddress);
         user.getAddresses().add(address);
         userRepository.save(user);
 
@@ -72,19 +67,19 @@ public class OrderServiceImp implements OrderService {
         }
 
 
-        Order createdOrder=new Order();
-        createdOrder.setUser(user);
-        createdOrder.setOrderItems(orderItems);
-        createdOrder.setTotalPrice(cart.getTotalPrice());
-        createdOrder.setTotalDiscountedPrice(cart.getTotalDiscountedPrice());
-        createdOrder.setDiscounte(cart.getDiscounte());
-        createdOrder.setTotalItem(cart.getTotalItem());
-
-        createdOrder.setShippingAddress(address);
-        createdOrder.setOrderDate(LocalDateTime.now());
-        createdOrder.setOrderStatus(OrderStatus.PENDING);
-        createdOrder.getPaymentDetails().setStatus(PaymentStatus.PENDING);
-        createdOrder.setCreatedAt(LocalDateTime.now());
+        Order createdOrder = Order.builder()
+                .user(user)
+                .orderItems(orderItems)
+                .totalPrice(cart.getTotalPrice())
+                .totalDiscountedPrice(cart.getTotalDiscountedPrice())
+                .discount(cart.getDiscount())
+                .totalItem(cart.getTotalItem())
+                .shippingAddress(shipAddress)
+                .orderDate(LocalDateTime.now())
+                .orderStatus(OrderStatus.PENDING)
+                .paymentDetails(PaymentDetails.builder().status(PaymentStatus.PENDING).build())
+                .createdAt(LocalDateTime.now())
+                .build();
 
         Order savedOrder=orderRepository.save(createdOrder);
 

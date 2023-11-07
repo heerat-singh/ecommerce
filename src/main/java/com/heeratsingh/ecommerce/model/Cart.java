@@ -15,10 +15,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Cart {
 
     @Id
@@ -41,19 +47,7 @@ public class Cart {
 
     private int totalDiscountedPrice;
 
-    private int discounte;
+    private int discount;
 
-    public Cart() {
-        // TODO Auto-generated constructor stub
-    }
-
-    public Cart(Long id, User user, Set<CartItem> cartItems, double totalPrice, int totalItem) {
-        super();
-        this.id = id;
-        this.user = user;
-        this.cartItems = cartItems;
-        this.totalPrice = totalPrice;
-        this.totalItem = totalItem;
-    }
 }
 

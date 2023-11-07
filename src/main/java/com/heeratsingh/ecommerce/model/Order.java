@@ -16,6 +16,8 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -27,6 +29,8 @@ import java.util.Set;
 @Entity
 @Table(name = "orders")
 @Data
+@Builder
+@AllArgsConstructor
 public class Order {
 
     @Id
@@ -56,7 +60,7 @@ public class Order {
 
     private Integer totalDiscountedPrice;
 
-    private Integer discounte;
+    private Integer discount;
 
     private OrderStatus orderStatus;
 
